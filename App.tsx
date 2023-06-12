@@ -3,7 +3,8 @@ import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import WelcomePage from "./view/WelcomePage";
-import Login from "./view/Login";
+import LoginForm from "./components/forms/LoginForm";
+import RegisterForm from "./components/forms/RegisterForm";
 import Dashboard from "./view/Dashboard";
 
 const Stack = createStackNavigator();
@@ -18,7 +19,8 @@ export default function App() {
             component={WelcomePage}
             options={{ headerShown: false }}
           />
-          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Login" component={LoginForm} />
+          <Stack.Screen name="Register" component={RegisterForm} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
         </Stack.Navigator>
       </NavigationContainer>

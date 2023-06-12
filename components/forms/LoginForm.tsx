@@ -1,8 +1,19 @@
 import React from "react";
 import { Text, View, Pressable } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+
+type WelcomePageNavigationProp = StackNavigationProp<{ Register: undefined }>;
 
 const LoginForm = () => {
+  const navigation = useNavigation<WelcomePageNavigationProp>();
+
+  const handleRegister = (): void => {
+    // Navigate to the Login screen
+    navigation.navigate("Register");
+  };
+
   return (
     <View className="flex items-center justify-center h-full">
       <View className="mb-4">
@@ -21,8 +32,16 @@ const LoginForm = () => {
           style={{ width: 200 }}
         />
       </View>
-      <Pressable className="bg-blue-500 p-2 rounded-lg" style={{ width: 100 }}>
+      <Pressable
+        className="bg-blue-500 p-2 rounded-lg mb-3"
+        style={{ width: 100 }}
+      >
         <Text className="text-black text-lg font-bold text-center">Login</Text>
+      </Pressable>
+      <Pressable onPress={handleRegister}>
+        <Text className="text-black text-lg italic">
+          No account yet? Register here
+        </Text>
       </Pressable>
     </View>
   );
