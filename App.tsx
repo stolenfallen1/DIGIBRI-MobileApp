@@ -13,7 +13,11 @@ export default function App() {
     <View className="flex flex-1">
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Welcome" component={WelcomePage} />
+          <Stack.Screen
+            name="HOME"
+            component={WelcomePage}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
         </Stack.Navigator>
