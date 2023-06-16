@@ -21,7 +21,11 @@ export default function App() {
           />
           <Stack.Screen name="Login" component={LoginForm} />
           <Stack.Screen name="Register" component={RegisterForm} />
-          <Stack.Screen name="Dashboard" component={Dashboard} />
+          <Stack.Screen
+            name="Dashboard"
+            component={Dashboard}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />

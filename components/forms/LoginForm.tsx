@@ -5,13 +5,20 @@ import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 
 type WelcomePageNavigationProp = StackNavigationProp<{ Register: undefined }>;
+type DashboardNavigationProp = StackNavigationProp<{ Dashboard: undefined }>;
 
 const LoginForm = () => {
-  const navigation = useNavigation<WelcomePageNavigationProp>();
+  const WelcomePageNavigationProp = useNavigation<WelcomePageNavigationProp>();
+  const DashboardNavigationProp = useNavigation<DashboardNavigationProp>();
 
   const handleRegister = (): void => {
     // Navigate to the Login screen
-    navigation.navigate("Register");
+    WelcomePageNavigationProp.navigate("Register");
+  };
+
+  const handleDashboard = (): void => {
+    // Navigate to the Login screen
+    DashboardNavigationProp.navigate("Dashboard");
   };
 
   return (
@@ -33,6 +40,7 @@ const LoginForm = () => {
         />
       </View>
       <Pressable
+        onPress={handleDashboard}
         className="bg-blue-500 p-2 rounded-lg mb-3"
         style={{ width: 100 }}
       >
