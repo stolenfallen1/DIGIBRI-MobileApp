@@ -4,14 +4,14 @@ import { TextInput } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 
-type WelcomePageNavigationProp = StackNavigationProp<{ Register: undefined }>;
+type WelcomePageNavigationProp = StackNavigationProp<{ Login: undefined }>;
 
 const RegisterForm = () => {
   const navigation = useNavigation<WelcomePageNavigationProp>();
 
   const handleLogin = (): void => {
     // Navigate to the Login screen
-    navigation.navigate("Register");
+    navigation.navigate("Login");
   };
 
   return (
