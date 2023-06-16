@@ -20,12 +20,12 @@ export default function App() {
             options={{ headerShown: false }}
           />
           <Stack.Screen name="Login" component={LoginForm} />
-          <Stack.Screen name="Register" component={RegisterForm} />
           <Stack.Screen
-            name="Dashboard"
-            component={Dashboard}
+            name="Register"
+            component={RegisterForm}
             options={{ headerShown: false }}
           />
+          <Stack.Screen name="Dashboard" component={Dashboard} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />

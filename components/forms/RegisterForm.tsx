@@ -40,9 +40,17 @@ const RegisterForm = () => {
           style={{ width: 200 }}
         />
       </View>
-      <Pressable className="bg-blue-500 p-2 rounded-lg" style={{ width: 100 }}>
+      <Pressable
+        className="bg-blue-500 p-2 rounded-lg mb-3"
+        style={{ width: 100 }}
+      >
         <Text className="text-black text-lg font-bold text-center">
           Register
+        </Text>
+      </Pressable>
+      <Pressable onPress={handleLogin}>
+        <Text className="text-black text-lg italic">
+          Already have an account? Login here
         </Text>
       </Pressable>
     </View>
